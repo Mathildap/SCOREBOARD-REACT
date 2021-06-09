@@ -1,6 +1,9 @@
-const Player = ({ player, onAdd, onReduce }) => {
+const Player = ({ player, onAdd, onReduce, onDelete }) => {
     return (
-        <div className='player-container'>
+        <div
+            className='player-container'
+            onDoubleClick={() => onDelete(player.id)}
+        >
             <h3>{player.userName}</h3>
             <p>Score: {player.score}</p>
             <div>

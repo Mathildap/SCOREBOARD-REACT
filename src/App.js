@@ -3,6 +3,7 @@ import Score from './components/Score';
 import { useState } from 'react';
 import NewPlayer from './components/NewPlayer';
 import ScoreBoard from './components/ScoreBoard';
+import Header from './components/Header';
 
 function App() {
     const [players, setPlayers] = useState([
@@ -52,8 +53,14 @@ function App() {
         setPlayers([...players, newPlayer]);
     };
 
+    // DELETE PLAYER
+    const deletePlayer = (id) => {
+        setPlayers(players.filter((player) => player.id !== id));
+    };
+
     return (
         <>
+            <Header />
             <div className='score-board'>
                 <ScoreBoard />
                 <div className='players-container'>
@@ -61,6 +68,7 @@ function App() {
                         players={players}
                         onAdd={incScore}
                         onReduce={redScore}
+                        onDelete={deletePlayer}
                     />
                 </div>
             </div>

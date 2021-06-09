@@ -1,6 +1,6 @@
 import Player from './Player';
 
-const Score = ({ players, onAdd, onReduce }) => {
+const Score = ({ players, onAdd, onReduce, onDelete }) => {
     console.log(players);
     return (
         <>
@@ -12,6 +12,7 @@ const Score = ({ players, onAdd, onReduce }) => {
                         player={player}
                         onAdd={onAdd}
                         onReduce={onReduce}
+                        onDelete={onDelete}
                     />
                 ))}
         </>

@@ -16,15 +16,20 @@ const NewPlayer = ({ onAddPlayer }) => {
     };
 
     return (
-        <form onSubmit={onSubmit}>
-            <input
-                type='text'
-                placeholder='Name'
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-            />
-            <button type='submit'>Add Player</button>
-        </form>
+        <>
+            <form onSubmit={onSubmit}>
+                <input
+                    type='text'
+                    placeholder='Name'
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                />
+                <button type='submit'>Add Player</button>
+            </form>
+            <div>
+                <p className='deleteP'>Doubleclick on a player to delete</p>
+            </div>
+        </>
     );
 };
 
