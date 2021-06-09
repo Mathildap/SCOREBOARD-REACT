@@ -1,13 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap');
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Oswald', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* SCORE */
+.score-board {
+    display: flex;
+    justify-content: space-between;
+}
+.score-numbers {
+    display: flex;
+    flex-flow: column;
+}
+.first {
+    background-color: rgba(241, 167, 61, 0.95);
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.second {
+    background-color: rgba(162, 228, 66, 0.95);
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.third {
+    background-color: rgba(90, 154, 244, 0.95);
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.score-numbers span {
+    height: 60px;
+    width: 60px;
+    border-radius: 10px;
+    border: 1px solid white;
+    box-shadow: 3px 3px 10px rgb(181, 181, 181);
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    text-shadow: 1px 2px 2px rgb(130, 130, 130);
+}
+
+/* PLAYERS */
+.players-container {
+    width: 90%;
+}
+.player-container {
+    height: 60px;
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.884);
+    border-radius: 10px;
+    border: 1px solid white;
+    box-shadow: 3px 3px 10px rgb(181, 181, 181);
+    display: flex;
+    justify-content: space-between;
+}
+.player-container h3 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: auto 10px;
+    width: 15%;
+}
+.player-container p {
+    letter-spacing: 1px;
+}
+.player-container button {
+    height: 40px;
+    width: 40px;
+    margin: 10px;
+    border-radius: 50px;
+    font-size: 30px;
+    border: 2px solid rgba(255, 255, 255, 0.95);
+    box-shadow: 3px 3px 5px rgb(181, 181, 181);
+}
+.player-container button:first-child {
+    margin-right: 0px;
+}
+.minus {
+    background-color: rgba(255, 124, 174, 0.851);
+}
+.plus {
+    background-color: rgba(255, 239, 119, 0.685);
+}
+
+/* ADD PLAYER */
+form {
+    text-align: center;
+    margin: 20px;
+}
+form input {
+    padding: 10px;
+    width: 60%;
+    margin-right: 10px;
+    border-radius: 10px;
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 3px 3px 10px rgb(181, 181, 181);
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+    font-size: 15px;
+    outline: none;
+}
+form button {
+    padding: 10px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    background-color: rgba(241, 167, 61, 0.85);
+    box-shadow: 3px 3px 10px rgb(181, 181, 181);
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+    font-size: 15px;
+    color: white;
+    text-shadow: 1px 1px 2px rgb(130, 130, 130);
 }
