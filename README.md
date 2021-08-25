@@ -14,4 +14,4 @@ Open http://localhost:3000 to view it in the browser.
 
 ---
 
-Scoreboard where you can add and remove players and score. The players are sorted in order by most points.
+Scoreboard where you can add and remove players and score. The players are sorted in order by highest score.
